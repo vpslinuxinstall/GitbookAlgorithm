@@ -1,0 +1,469 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="renderer" content="webkit">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <meta name="renderer" content="webkit"/>
+    <title>Table</title>
+    <link rel="stylesheet" href="data:text/css;base64,CiAgICBoMSwgaDIsIGgzLCBoNSwgaDYsICBpbWcsIHN2ZywgcHJlLCB0YWJsZSwgdHJ7cGFnZS1icmVhay1pbnNpZGU6IGF2b2lkfQoKCiAgICBib2R5IHsKICAgICAgICBiYWNrZ3JvdW5kOiAjRkZGRkZGOwogICAgICAgIGZvbnQtc2l6ZTogMTRweDsKICAgICAgICBsaW5lLWhlaWdodDoyLjM7CiAgICAgICAgZm9udC1mYW1pbHk6ICJIZWx2ZXRpY2EiOwogICAgICAgIGZvbnQtd2VpZ2h0OiBub3JtYWw7CiAgICAgICAgY29sb3I6ICMzQzNDM0M7CiAgICAgICAgcGFkZGluZzogMCAzOHB4OwogICAgICAgIG1heC13aWR0aDogODIwcHg7CiAgICAgICAgbWFyZ2luOiAwIGF1dG87CgogICAgICAgIHdvcmQtd3JhcDpicmVhay13b3JkOwogICAgICAgIHdvcmQtYnJlYWs6IG5vcm1hbDsKICAgICAgICBvdmVyZmxvdy13cmFwOmJyZWFrLXdvcmQ7CgoKICAgICAgICBvdmVyZmxvdy14OiBoaWRkZW47CiAgICAgICAgdGV4dC1yZW5kZXJpbmc6IG9wdGltaXplTGVnaWJpbGl0eTsKICAgICAgICAtd2Via2l0LXRleHQtc2l6ZS1hZGp1c3Q6IG5vbmU7CiAgICB9CgogICAgYnJ7CiAgICAgICAgbGluZS1oZWlnaHQ6IDIuMzsKICAgIH0KCgoKICAgIEBtZWRpYSAobWF4LXdpZHRoOiA2MDBweCkgewogICAgICAgIGJvZHl7CiAgICAgICAgICAgIHBhZGRpbmc6IDAgMzBweDsKICAgICAgICB9CiAgICB9CgogICAgQG1lZGlhIChtYXgtd2lkdGg6IDQ4MHB4KSB7CiAgICAgICAgYm9keXsKICAgICAgICAgICAgcGFkZGluZzogMCAyMHB4OwogICAgICAgIH0KICAgIH0KCiAgICAuZ2lzdHsKICAgICAgICB3b3JkLWJyZWFrOiBub3JtYWw7CiAgICB9CgogICAgLnBvc3R7CiAgICAgICAgbWFyZ2luLXRvcDogMTBweDsKICAgICAgICBtYXJnaW4tYm90dG9tOiA1MHB4OwogICAgICAgIHBvc2l0aW9uOiByZWxhdGl2ZTsKICAgIH0KCgoKICAgIGltZ3sKICAgICAgICBtYXgtd2lkdGg6IDk4JTsKICAgICAgICBtYXJnaW46IDAuOGVtIGF1dG8gMC44ZW0gYXV0bzsKICAgIH0KCiAgICBoMSBpbWcsIGgyIGltZywgaDMgaW1nLCBoNCBpbWcsIGg1IGltZywgaDYgaW1newogICAgICAgIG1hcmdpbjogYXV0bzsKICAgIH0KCiAgICAueDJfaW1hZ2V7CiAgICAgICAgem9vbTogNTAlOwogICAgfQoKICAgIC54M19pbWFnZXsKICAgICAgICB6b29tOiAzMy4zMyU7CiAgICB9CgogICAgLng0X2ltYWdlewogICAgICAgIHpvb206IDI1JTsKICAgIH0KCgogICAgcCBpbWd7CiAgICAgICAgbWFyZ2luOiAwIGF1dG87CiAgICB9CgogICAgcHsKICAgICAgICAvKm92ZXJmbG93OmhpZGRlbjsqLwogICAgICAgIG1hcmdpbjogMS4wZW0gMCAxLjhlbSAwOwogICAgfQoKICAgIHAubWRfYmxvY2tfYXNfb3BlbmluZ3sKICAgICAgICBtYXJnaW4tYm90dG9tOiAtMC41ZW0gIWltcG9ydGFudDsKICAgIH0KCiAgICBsaSBwewogICAgICAgIGxpbmUtaGVpZ2h0OiAyLjA3OwogICAgICAgIG1hcmdpbjogMDsKICAgIH0KCiAgICAucF9wYXJ0IHsKICAgICAgICBtYXJnaW46IDEwcHggMDsKICAgIH0KCiAgICAucF9wYXJ0IHB7CiAgICAgICAgbWFyZ2luOiAwIDAgMC42ZW0gMDsKICAgIH0KCiAgICAvKiB0ZXh0IGluZGVudCBmb3IgY2hpbmVzZSBzdGFydHMqLwogICAgLypoMiwgaDMsIGg0LCBoNSwgaDYsIC5wX3BhcnQgcCwgLnRvZG9faXRlbSwgcHsKICAgICAgICB0ZXh0LWluZGVudDogMHB4OwogICAgfSovCiAgICB0YWJsZSwgcHJlLCBzdmcsIC5jb2RlaGlsaXRldGFibGV7CiAgICAgICAgbWFyZ2luLWxlZnQ6IDBweDsKICAgICAgICBtYXJnaW4tcmlnaHQ6IDBweDsKICAgIH0KCiAgICAuY29kZWhpbGl0ZXRhYmxlIHByZXsKICAgICAgICBtYXJnaW4tbGVmdDogMDsKICAgICAgICBtYXJnaW4tcmlnaHQ6IDA7CgogICAgfQoKICAgIC5jb2RlaGlsaXRldGFibGUgLmNvZGVoaWxpdGUgcHJlewogICAgICAgIGJvcmRlci1sZWZ0OiBub25lOwogICAgfQoKICAgIC8qIHRleHQgaW5kZW50IGZvciBjaGluZXNlIGVuZHMqLwoKCiAgICBibG9ja3F1b3RlIC5wX3BhcnQgcCwgbGkgLnBfcGFydCBwewogICAgICAgIHRleHQtaW5kZW50OiAwICFpbXBvcnRhbnQ7CiAgICB9CgoKICAgIGhyewogICAgICAgIG1hcmdpbjogMzhweCAwOwogICAgICAgIGJvcmRlcjogbm9uZTsKICAgICAgICBib3JkZXItYm90dG9tOiAxcHggZGFzaGVkIHJnYmEoMjA1LCAyMDUsIDIwNSwgMC4zNSk7CiAgICAgICAgY29sb3I6IHJnYmEoMjA1LCAyMDUsIDIwNSwgMC4zNSk7CiAgICAgICAgaGVpZ2h0OiAxcHg7CiAgICAgICAgbGluZS1oZWlnaHQ6MXB4OwogICAgICAgIGZvbnQtc2l6ZToxcHg7CiAgICAgICAgb3ZlcmZsb3cteTogaGlkZGVuOwogICAgfQoKCiAgICBoMXsKICAgICAgICBjb2xvcjogIzEwQTNFRTsKICAgICAgICBmb250LXNpemU6IDEuN2VtOwogICAgICAgIHRleHQtYWxpZ246IGxlZnQ7CiAgICAgICAgbWFyZ2luOiAwOwogICAgICAgIHBhZGRpbmc6IDA7CiAgICAgICAgbGluZS1oZWlnaHQ6IDEuN2VtOwogICAgICAgIG1hcmdpbi10b3A6IDAuOGVtOwogICAgICAgIG1hcmdpbi1ib3R0b206IDAuNmVtOwogICAgfQoKICAgIGgxLCBoMiwgaDMsIGg0ewogICAgICAgIGNvbG9yOiAjMTBBM0VFOwogICAgfQogICAgCiAgICBoMXtjb2xvcjojMTBBM0VFfQoKCgogICAgaDIsIGgzewogICAgICAgIGxpbmUtaGVpZ2h0OiAxLjVlbTsKICAgICAgICBtYXJnaW4tdG9wOiAxLjhlbTsKICAgICAgICBtYXJnaW4tYm90dG9tOiAwLjVlbTsKICAgIH0KCiAgICAuaDE2Lm1kX2ZpcnN0X2gubWRfZmlyc3RfcGFydCB7CiAgICAgICAgbWFyZ2luLXRvcDogNXB4OwogICAgfQoKICAgIGgyIHsKICAgICAgICBmb250LXNpemU6IDEuNWVtOwogICAgfQoKICAgIGgzIHsKICAgICAgICBmb250LXNpemU6IDEuMjVlbQogICAgfQoKICAgIGg0IHsKICAgICAgICBmb250LXNpemU6IDEuMTVlbTsKICAgIH0KCiAgICBoNSB7CiAgICAgICAgZm9udC1zaXplOiAxLjFlbTsKICAgIH0KCiAgICBoNiB7Zm9udC1zaXplOiAxZW19CgoKICAgIGgxLCBoMiwgaDMsIGg0LCBoNSwgaDZ7CiAgICAgICAgZm9udC1mYW1pbHk6ICJIZWl0aSBTQyI7CiAgICB9CgoKICAgIG9sIHsKICAgICAgICBtYXJnaW46IDA7CiAgICB9CgogICAgdWx7CiAgICAgICAgcGFkZGluZzogNXB4IDM4cHg7CiAgICAgICAgbWFyZ2luOiAwOwogICAgfQoKICAgIHVsIGxpLCBsaXsKICAgICAgICBwYWRkaW5nOiAwOwogICAgICAgIG1hcmdpbjogMDsKICAgIH0KCiAgICB1bCBwLCBvbCBwewogICAgICAgIG92ZXJmbG93OiB2aXNpYmxlOwogICAgfQoKCiAgICBibG9ja3F1b3RlIHsKICAgICAgICAtbW96LWJveC1zaXppbmc6IGJvcmRlci1ib3g7CiAgICAgICAgYm94LXNpemluZzogYm9yZGVyLWJveDsKICAgICAgICBtYXJnaW46IDEuNmVtIDA7CiAgICAgICAgcGFkZGluZzogMCAwIDAgMS4yZW07CiAgICAgICAgYm9yZGVyLWxlZnQ6IDAuNGVtIHNvbGlkICMxNkIwRkY7CiAgICAgICAgY29sb3I6ICM4ODg4ODg7CiAgICAgICAgbWluLWhlaWdodDoyMHB4OwogICAgfQoKCiAgICBibG9ja3F1b3RlIHAgewogICAgICAgIG1hcmdpbjogMC44ZW0gMDsKICAgIH0KCiAgICBibG9ja3F1b3RlIHNwYW4ubWRfbGluZSB7CiAgICAgICAgbWFyZ2luLWJvdHRvbTogMC4yNWVtOwogICAgICAgIG1hcmdpbi10b3A6IDAuMjVlbTsKICAgIH0KCiAgICBibG9ja3F1b3RlIHVsewogICAgICAgIHBhZGRpbmc6IDAgMTVweDsKICAgIH0KCiAgICBibG9ja3F1b3RlIHNtYWxsIHsKICAgICAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7CiAgICAgICAgbWFyZ2luOiAwLjhlbSAwIDAuOGVtIDEuNWVtOwogICAgICAgIGZvbnQtc2l6ZTogMC45ZW07CiAgICAgICAgY29sb3I6ICNjY2M7CiAgICB9CgoKCgoKCiAgICB0YWJsZSB7CiAgICAgICAgbGluZS1oZWlnaHQ6IDEuNzsKICAgICAgICAtbW96LWJveC1zaXppbmc6IGJvcmRlci1ib3g7CiAgICAgICAgYm94LXNpemluZzogYm9yZGVyLWJveDsKICAgICAgICBtYXJnaW46IDFlbSAwOwogICAgICAgIHdpZHRoOiAxMDAlOwogICAgICAgIG1heC13aWR0aDogMTAwJTsKICAgICAgICBib3JkZXItd2lkdGg6IDFweDsKICAgICAgICBib3JkZXItc3R5bGU6IHNvbGlkOwogICAgICAgIGJhY2tncm91bmQtY29sb3I6IHRyYW5zcGFyZW50OwogICAgICAgIGJvcmRlci1zcGFjaW5nOiAwOwogICAgICAgIHdvcmQtYnJlYWs6IG5vcm1hbDsKICAgIH0KICAgIAogICAgLyogZm9yIHdlY2hhdCBvbmx5IHN0YXJ0cyAqLwogICAgdGFibGUgdHJ7CiAgICAgICAgYm9yZGVyLXJpZ2h0LXN0eWxlOiBzb2xpZDsKICAgICAgICBib3JkZXItcmlnaHQtd2lkdGg6IDFweDsKICAgIH0KICAgIAogICAgdGFibGUgdGJvZHl7CiAgICAgICAgYm9yZGVyLWJvdHRvbS13aWR0aDogMXB4OwogICAgICAgIGJvcmRlci1ib3R0b20tc3R5bGU6IHNvbGlkOwogICAgfQogICAgLyogZm9yIHdlY2hhdCBvbmx5IGVuZHMgKi8KCgogICAgdGFibGUsIHRhYmxlIHRyLCB0YWJsZSB0ciB0ZCwgdGFibGUgdHIgdGgsIHRhYmxlIHRib2R5IHsKICAgICAgICBib3JkZXItY29sb3I6IHJnYmEoMjA1LCAyMDUsIDIwNSwgMC4zNSk7CiAgICB9CgogICAgdGFibGUgdGggewogICAgICAgIGZvbnQtd2VpZ2h0OiBib2xkOwogICAgfQoKICAgIHRyIHRoIHsKICAgICAgICBib3JkZXItYm90dG9tLXdpZHRoOiAxcHg7CiAgICAgICAgYm9yZGVyLWJvdHRvbS1zdHlsZTogc29saWQ7CiAgICAgICAgdGV4dC1hbGlnbjogbGVmdDsKICAgIH0KCiAgICB0ciB0aCwgdHIgdGQgewogICAgICAgIHBhZGRpbmc6IDEwcHggMjBweDsKICAgICAgICBib3JkZXItcmlnaHQ6IDFweCBzb2xpZDsKICAgICAgICBib3JkZXItYm90dG9tOiAxcHggc29saWQgcmdiYSgyMDUsIDIwNSwgMjA1LCAwLjM1KTsKICAgIH0KCiAgICB0Ym9keSB0cjpsYXN0LWNoaWxkIHRkewogICAgICAgIGJvcmRlci1ib3R0b206IDA7CiAgICB9CgogICAgdHIgdGg6bGFzdC1jaGlsZCwgdHIgdGQ6bGFzdC1jaGlsZCB7CiAgICAgICAgYm9yZGVyLXJpZ2h0OiAwOwogICAgfQoKICAgIHRhYmxlIHRib2R5ID4gdHI6bnRoLWNoaWxkKG9kZCkgPiB0ZCwgdGFibGUgdGJvZHkgPiB0cjpudGgtY2hpbGQob2RkKSA+IHRoIHsKICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2JhKDIzNSwgMjM1LCAyMzUsIDAuMik7CiAgICB9CgoKCgogICAgY29kZXsKICAgICAgICBiYWNrZ3JvdW5kOiByZ2JhKDIzNSwgMjM1LCAyMzUsIDAuMzUpOwogICAgICAgIGNvbG9yOiAjNDhCNDU2OwogICAgICAgIHBhZGRpbmc6IDAgNXB4OwogICAgICAgIG1hcmdpbjogMCAycHg7CiAgICB9CgogICAgcHJlewogICAgICAgIG1hcmdpbi10b3A6IDEuMmVtOwogICAgICAgIG1hcmdpbi1ib3R0b206IDEuMmVtOwogICAgICAgIHBhZGRpbmc6IDE1cHggMTBweDsKICAgICAgICBkaXNwbGF5OiBibG9jazsKICAgICAgICAvKiBvdmVyZmxvdzogYXV0bzsgKi8KICAgICAgICBib3JkZXI6IDFweCBzb2xpZCByZ2JhKDIwNSwgMjA1LCAyMDUsIDAuMzUpOwogICAgICAgIC8qYmFja2dyb3VuZDogcmdiYSgyMzUsIDIzNSwgMjM1LCAwLjM1KTsqLwogICAgICAgIGZvbnQtc2l6ZTogOTAlOwogICAgICAgIGxpbmUtaGVpZ2h0OjIuMzsKICAgICAgICB3aGl0ZS1zcGFjZTogcHJlLXdyYXA7CiAgICB9CgogICAgLmhpZ2hsaWdodHRhYmxlIHRkewogICAgICAgIC8qYmFja2dyb3VuZC1jb2xvcjogcmdiYSgyMzUsIDIzNSwgMjM1LCAwLjM1KSAhaW1wb3J0YW50OyovCiAgICB9CgogICAgLndpdGhfbGluZXMgcHJlewogICAgICAgIGJvcmRlcjpub25lOwogICAgICAgIG1hcmdpbi10b3A6IDAuMmVtOwogICAgICAgIG1hcmdpbi1ib3R0b206IDAuMmVtOwogICAgICAgIGJhY2tncm91bmQ6IHRyYW5zcGFyZW50OwogICAgfQoKICAgIC5pc19jb2RlX2ZpbGUgcHJlewogICAgICAgIGJvcmRlcjogbm9uZTsKICAgICAgICBiYWNrZ3JvdW5kOiB0cmFuc3BhcmVudDsKICAgIH0KCiAgICAuY29kZWhpbGl0ZSBwcmV7CiAgICAgICAgLyp3b3JkLXdyYXA6IG5vcm1hbDsqLwogICAgICAgIGZvbnQtc2l6ZTogMTNweDsKICAgIH0KCiAgICBwcmUgY29kZXsKICAgICAgICBib3JkZXI6bm9uZTsKICAgICAgICBiYWNrZ3JvdW5kOiBub25lOwogICAgICAgIHBhZGRpbmc6IDA7CiAgICAgICAgbWFyZ2luOiAwOwogICAgfQoKICAgIHByZSBwewogICAgICAgIG1hcmdpbjogMDsKICAgICAgICBwYWRkaW5nOiAwOwogICAgfQoKICAgIC5jb2RlaGlsaXRlIHRoLCAuY29kZWhpbGl0ZSB0ZHsKICAgICAgICBsaW5lLWhlaWdodDogMS44ZW07CiAgICB9CgoKICAgIGF7CiAgICAgICAgY29sb3I6ICM0MDgzQzQ7CiAgICAgICAgdGV4dC1kZWNvcmF0aW9uOiBub25lOwogICAgICAgIC8vYm9yZGVyLWJvdHRvbTogMXB4IHNvbGlkIHRyYW5zcGFyZW50OwogICAgfQoKICAgIGE6aG92ZXJ7CiAgICAgICAgdGV4dC1kZWNvcmF0aW9uOiB1bmRlcmxpbmU7CiAgICAgICAgLy9ib3JkZXItYm90dG9tOiAxcHggc29saWQgIzQwODNDNDsKICAgIH0KCiAgICBzdHJvbmcgewogICAgICAgIGNvbG9yOiAjMDAwMDAwOwogICAgICAgIGZvbnQtd2VpZ2h0OiBib2xkOwogICAgfQoKCiAgICAvKiBmb3IgbWFya2Rvd24gKi8KCiAgICAubGluZW5vcyBwcmV7CgkJYmFja2dyb3VuZDogdHJhbnNwYXJlbnQ7CgkJYm9yZGVyOiBub25lOwoJfQoKCS5saW5lbm9zewoJICAgIHBhZGRpbmc6IDAgNXB4IDAgNXB4OwoJICAgIHdpZHRoOiAwLjAwMSU7Cgl9CgoJLmhpZ2hsaWdodHRhYmxlIHByZXsKCSAgICBwYWRkaW5nOiA1cHggMTBweDsKCX0KCiAgICAudG9jewogICAgICAgIGJhY2tncm91bmQ6IE5vbmU7CiAgICAgICAgYm9yZGVyLXJhZGl1czogNXB4OwogICAgICAgIGJvcmRlcjogMXB4IHNvbGlkIE5vbmU7CiAgICAgICAgbWFyZ2luOiAyN3B4IDAgNDdweCAwOwogICAgICAgIHBhZGRpbmc6IDEwcHggMDsKICAgIH0KCiAgICAudG9jIHVsewogICAgICAgIC8vcGFkZGluZzogNXB4IDQycHg7CiAgICB9CgogICAgLnRvYyB1bCBsaXsKICAgICAgICBwYWRkaW5nOiAwOwogICAgICAgIG1hcmdpbjogMDsKICAgIH0KICAgIC50b2MgYXsKICAgICAgICBjb2xvcjogIzNDM0MzQzsKICAgIH0KCgoKICAgIC50b2RvX2l0ZW17CiAgICAgICAgbGlzdC1zdHlsZTogbm9uZTsKICAgICAgICBtYXJnaW4tbGVmdDogLTEuNWVtCiAgICB9CiAgICAudG9kb19pdGVtIC50b2RvX2l0ZW0gewogICAgICAgIG1hcmdpbi1sZWZ0OiBhdXRvOwogICAgfQoKICAgIC50b2RvX2RvbmVfaXRlbXsKICAgICAgICBjb2xvcjogIzk5OTk5OTsKICAgIH0KCiAgICAudG9kb191bmRvbmVfaXRlbXsKICAgICAgICBjb2xvcjogI0M4NUE1NzsKICAgIH0KCgogICAgdWwgbGkudG9kb19pdGVtewoJbGlzdC1zdHlsZS10eXBlOiBub25lOwogICAgfQoKICAgIHVsIGxpLnRvZG9faXRlbTpiZWZvcmV7CiAgICAgICAgY29udGVudDogJ+KYkCc7CiAgICAgICAgLypwYWRkaW5nLXJpZ2h0OiAwLjJlbTsqLwogICAgICAgIGZvbnQtZmFtaWx5OiBhcmlhbDsKICAgIH0KCiAgICB1bCBsaS50b2RvX2RvbmVfaXRlbTpiZWZvcmV7CiAgICAgICAgY29udGVudDogJ+KYkSc7CiAgICAgICAgLypwYWRkaW5nLXJpZ2h0OiAwLjJlbTsqLwogICAgICAgIGZvbnQtZmFtaWx5OiBhcmlhbDsKICAgIH0KCiAgICB1bCBsaS50b2RvX2l0ZW0gaW5wdXR7CiAgICAgICAgZGlzcGxheTpub25lCiAgICB9CgoKICAgIC8qcHlnbWVudHMqLwoKICAgIC5jb2RlaGlsaXRlewogICAgICAgIGJhY2tncm91bmQ6IHRyYW5zcGFyZW50ICFpbXBvcnRhbnQ7CiAgICB9CgogICAgdGFibGUuY29kZWhpbGl0ZXRhYmxleyBib3JkZXI6bm9uZTsgfQoKCiAgICAuY29kZWhpbGl0ZXRhYmxlIHRkeyBib3JkZXI6IG5vbmU7IHBhZGRpbmc6IDA7fQoKICAgIC5mbG93LWdyYXBoaWMsIC5tZF9ibG9ja19zZWN0aW9uX2Zvcl9mbG93X2dyYXBoaWN7dGV4dC1hbGlnbjogY2VudGVyfQogICAgLmZsb3ctZ3JhcGhpYyB7IG92ZXJmbG93LXg6IGF1dG87fQogICAgLm1lcm1haWQsIC5tZF9ibG9ja19zZWN0aW9uX2Zvcl9tZXJtYWlke3RleHQtYWxpZ246IGNlbnRlcn0KCgogICAgdGFibGUsIHRyLCB0ZCwgdGgsIHRib2R5LCB0aGVhZCwgdGZvb3QsIC5tZF9lY2hhcnRzLCBibG9ja3F1b3RlIC5tZF9saW5lewogICAgICAgIHBhZ2UtYnJlYWstaW5zaWRlOiBhdm9pZCAhaW1wb3J0YW50OwogICAgfQoKICAgIC5mb290bm90ZXMgLm1kX2xpbmV7CiAgICAgICAgZGlzcGxheTogaW5saW5lICFpbXBvcnRhbnQ7CiAgICB9CgoKICAgIC5pbWdfcnRfOTB7CiAgICAgICAgdHJhbnNmb3JtOnJvdGF0ZSg5MGRlZyk7CiAgICAgICAgLW1zLXRyYW5zZm9ybTpyb3RhdGUoOTBkZWcpOwogICAgICAgIC1tb3otdHJhbnNmb3JtOnJvdGF0ZSg5MGRlZyk7CiAgICAgICAgLXdlYmtpdC10cmFuc2Zvcm06cm90YXRlKDkwZGVnKTsKICAgICAgICAtby10cmFuc2Zvcm06cm90YXRlKDkwZGVnKTsKICAgIH0KICAgIC5pbWdfcnRfMTgwewogICAgICAgIHRyYW5zZm9ybTpyb3RhdGUoMTgwZGVnKTsKICAgICAgICAtbXMtdHJhbnNmb3JtOnJvdGF0ZSgxODBkZWcpOwogICAgICAgIC1tb3otdHJhbnNmb3JtOnJvdGF0ZSgxODBkZWcpOwogICAgICAgIC13ZWJraXQtdHJhbnNmb3JtOnJvdGF0ZSgxODBkZWcpOwogICAgICAgIC1vLXRyYW5zZm9ybTpyb3RhdGUoMTgwZGVnKTsKICAgIH0KICAgIC5pbWdfcnRfMjcwewogICAgICAgIHRyYW5zZm9ybTpyb3RhdGUoMjcwZGVnKTsKICAgICAgICAtbXMtdHJhbnNmb3JtOnJvdGF0ZSgyNzBkZWcpOwogICAgICAgIC1tb3otdHJhbnNmb3JtOnJvdGF0ZSgyNzBkZWcpOwogICAgICAgIC13ZWJraXQtdHJhbnNmb3JtOnJvdGF0ZSgyNzBkZWcpOwogICAgICAgIC1vLXRyYW5zZm9ybTpyb3RhdGUoMjcwZGVnKTsKICAgIH0KCiAgICAubWRfaGFzX2Jsb2NrX2JlbG93ewogICAgICAgIG1hcmdpbi1ib3R0b206IDAuMWVtICFpbXBvcnRhbnQ7CiAgICB9CiAgICAubWRfaGFzX2Jsb2NrX2JlbG93X2ltZ3sKICAgICAgICBtYXJnaW4tYm90dG9tOiAtMC42ZW0gIWltcG9ydGFudDsKICAgIH0KCgogICAgLmNvZGVoaWxpdGUgLmVycnsKICAgICAgICBib3JkZXI6IG5vbmUgIWltcG9ydGFudDsKICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiB0cmFuc3BhcmVudCAhaW1wb3J0YW50OwogICAgfQoKCgogICAgICAgIHNwYW4ubWRfbGluZXttYXJnaW4tYm90dG9tOjAuNWVtOyBkaXNwbGF5OmJsb2NrOyBsaW5lLWhlaWdodDoxLjk4OTV9CiAgICAgICAgLm1kX2xpbmUgYnJ7IGRpc3BsYXk6IG5vbmU7fQogICAgICAgIC5jb2RlaGlsaXRlIC5obGwgeyBiYWNrZ3JvdW5kLWNvbG9yOiAgfQouY29kZWhpbGl0ZSAgeyBiYWNrZ3JvdW5kOiAjZWVlZWRkOyBjb2xvcjogIzU1NTU1NSB9Ci5jb2RlaGlsaXRlIC5jIHsgY29sb3I6ICM5OTk5OTkgfSAvKiBDb21tZW50ICovCi5jb2RlaGlsaXRlIC5lcnIgeyBjb2xvcjogI2E2MTcxNzsgYmFja2dyb3VuZC1jb2xvcjogI2UzZDJkMiB9IC8qIEVycm9yICovCi5jb2RlaGlsaXRlIC5rIHsgY29sb3I6ICM4QjAwOEI7IGZvbnQtd2VpZ2h0OiBib2xkIH0gLyogS2V5d29yZCAqLwouY29kZWhpbGl0ZSAubCB7IGNvbG9yOiAjYWU4MWZmIH0gLyogTGl0ZXJhbCAqLwouY29kZWhpbGl0ZSAubiB7IGNvbG9yOiAjNTU1NTU1IH0gLyogTmFtZSAqLwouY29kZWhpbGl0ZSAubyB7IGNvbG9yOiAjNTU1NTU1IH0gLyogT3BlcmF0b3IgKi8KLmNvZGVoaWxpdGUgLnAgeyBjb2xvcjogIzU1NTU1NSB9IC8qIFB1bmN0dWF0aW9uICovCi5jb2RlaGlsaXRlIC5jaCB7IGNvbG9yOiAjOTk5OTk5IH0gLyogQ29tbWVudC5IYXNoYmFuZyAqLwouY29kZWhpbGl0ZSAuY20geyBjb2xvcjogIzk5OTk5OSB9IC8qIENvbW1lbnQuTXVsdGlsaW5lICovCi5jb2RlaGlsaXRlIC5jcCB7IGNvbG9yOiAjMWU4ODliIH0gLyogQ29tbWVudC5QcmVwcm9jICovCi5jb2RlaGlsaXRlIC5jcGYgeyBjb2xvcjogIzk5OTk5OSB9IC8qIENvbW1lbnQuUHJlcHJvY0ZpbGUgKi8KLmNvZGVoaWxpdGUgLmMxIHsgY29sb3I6ICM5OTk5OTkgfSAvKiBDb21tZW50LlNpbmdsZSAqLwouY29kZWhpbGl0ZSAuY3MgeyBjb2xvcjogIzhCMDA4QjsgZm9udC13ZWlnaHQ6IGJvbGQgfSAvKiBDb21tZW50LlNwZWNpYWwgKi8KLmNvZGVoaWxpdGUgLmdkIHsgY29sb3I6ICNhYTAwMDAgfSAvKiBHZW5lcmljLkRlbGV0ZWQgKi8KLmNvZGVoaWxpdGUgLmdlIHsgZm9udC1zdHlsZTogaXRhbGljIH0gLyogR2VuZXJpYy5FbXBoICovCi5jb2RlaGlsaXRlIC5nciB7IGNvbG9yOiAjYWEwMDAwIH0gLyogR2VuZXJpYy5FcnJvciAqLwouY29kZWhpbGl0ZSAuZ2ggeyBjb2xvcjogIzAwMDA4MDsgZm9udC13ZWlnaHQ6IGJvbGQgfSAvKiBHZW5lcmljLkhlYWRpbmcgKi8KLmNvZGVoaWxpdGUgLmdpIHsgY29sb3I6ICMwMGFhMDAgfSAvKiBHZW5lcmljLkluc2VydGVkICovCi5jb2RlaGlsaXRlIC5nbyB7IGNvbG9yOiAjODg4ODg4IH0gLyogR2VuZXJpYy5PdXRwdXQgKi8KLmNvZGVoaWxpdGUgLmdwIHsgY29sb3I6ICM1NTU1NTUgfSAvKiBHZW5lcmljLlByb21wdCAqLwouY29kZWhpbGl0ZSAuZ3MgeyBmb250LXdlaWdodDogYm9sZCB9IC8qIEdlbmVyaWMuU3Ryb25nICovCi5jb2RlaGlsaXRlIC5ndSB7IGNvbG9yOiAjODAwMDgwOyBmb250LXdlaWdodDogYm9sZCB9IC8qIEdlbmVyaWMuU3ViaGVhZGluZyAqLwouY29kZWhpbGl0ZSAuZ3QgeyBjb2xvcjogI2FhMDAwMCB9IC8qIEdlbmVyaWMuVHJhY2ViYWNrICovCi5jb2RlaGlsaXRlIC5rYyB7IGNvbG9yOiAjOEIwMDhCOyBmb250LXdlaWdodDogYm9sZCB9IC8qIEtleXdvcmQuQ29uc3RhbnQgKi8KLmNvZGVoaWxpdGUgLmtkIHsgY29sb3I6ICM4QjAwOEI7IGZvbnQtd2VpZ2h0OiBib2xkIH0gLyogS2V5d29yZC5EZWNsYXJhdGlvbiAqLwouY29kZWhpbGl0ZSAua24geyBjb2xvcjogIzhCMDA4QjsgZm9udC13ZWlnaHQ6IGJvbGQgfSAvKiBLZXl3b3JkLk5hbWVzcGFjZSAqLwouY29kZWhpbGl0ZSAua3AgeyBjb2xvcjogIzhCMDA4QjsgZm9udC13ZWlnaHQ6IGJvbGQgfSAvKiBLZXl3b3JkLlBzZXVkbyAqLwouY29kZWhpbGl0ZSAua3IgeyBjb2xvcjogIzhCMDA4QjsgZm9udC13ZWlnaHQ6IGJvbGQgfSAvKiBLZXl3b3JkLlJlc2VydmVkICovCi5jb2RlaGlsaXRlIC5rdCB7IGNvbG9yOiAjYTdhN2E3OyBmb250LXdlaWdodDogYm9sZCB9IC8qIEtleXdvcmQuVHlwZSAqLwouY29kZWhpbGl0ZSAubGQgeyBjb2xvcjogI2U2ZGI3NCB9IC8qIExpdGVyYWwuRGF0ZSAqLwouY29kZWhpbGl0ZSAubSB7IGNvbG9yOiAjQjQ1MkNEIH0gLyogTGl0ZXJhbC5OdW1iZXIgKi8KLmNvZGVoaWxpdGUgLnMgeyBjb2xvcjogI0NENTU1NSB9IC8qIExpdGVyYWwuU3RyaW5nICovCi5jb2RlaGlsaXRlIC5uYSB7IGNvbG9yOiAjNjU4YjAwIH0gLyogTmFtZS5BdHRyaWJ1dGUgKi8KLmNvZGVoaWxpdGUgLm5iIHsgY29sb3I6ICM2NThiMDAgfSAvKiBOYW1lLkJ1aWx0aW4gKi8KLmNvZGVoaWxpdGUgLm5jIHsgY29sb3I6ICMwMDhiNDU7IGZvbnQtd2VpZ2h0OiBib2xkIH0gLyogTmFtZS5DbGFzcyAqLwouY29kZWhpbGl0ZSAubm8geyBjb2xvcjogIzAwNjg4QiB9IC8qIE5hbWUuQ29uc3RhbnQgKi8KLmNvZGVoaWxpdGUgLm5kIHsgY29sb3I6ICM3MDdhN2MgfSAvKiBOYW1lLkRlY29yYXRvciAqLwouY29kZWhpbGl0ZSAubmkgeyBjb2xvcjogIzU1NTU1NSB9IC8qIE5hbWUuRW50aXR5ICovCi5jb2RlaGlsaXRlIC5uZSB7IGNvbG9yOiAjMDA4YjQ1OyBmb250LXdlaWdodDogYm9sZCB9IC8qIE5hbWUuRXhjZXB0aW9uICovCi5jb2RlaGlsaXRlIC5uZiB7IGNvbG9yOiAjMDA4YjQ1IH0gLyogTmFtZS5GdW5jdGlvbiAqLwouY29kZWhpbGl0ZSAubmwgeyBjb2xvcjogIzU1NTU1NSB9IC8qIE5hbWUuTGFiZWwgKi8KLmNvZGVoaWxpdGUgLm5uIHsgY29sb3I6ICMwMDhiNDU7IHRleHQtZGVjb3JhdGlvbjogdW5kZXJsaW5lIH0gLyogTmFtZS5OYW1lc3BhY2UgKi8KLmNvZGVoaWxpdGUgLm54IHsgY29sb3I6ICM1NTU1NTUgfSAvKiBOYW1lLk90aGVyICovCi5jb2RlaGlsaXRlIC5weSB7IGNvbG9yOiAjNTU1NTU1IH0gLyogTmFtZS5Qcm9wZXJ0eSAqLwouY29kZWhpbGl0ZSAubnQgeyBjb2xvcjogIzhCMDA4QjsgZm9udC13ZWlnaHQ6IGJvbGQgfSAvKiBOYW1lLlRhZyAqLwouY29kZWhpbGl0ZSAubnYgeyBjb2xvcjogIzAwNjg4QiB9IC8qIE5hbWUuVmFyaWFibGUgKi8KLmNvZGVoaWxpdGUgLm93IHsgY29sb3I6ICM4QjAwOEIgfSAvKiBPcGVyYXRvci5Xb3JkICovCi5jb2RlaGlsaXRlIC53IHsgY29sb3I6ICNiYmJiYmIgfSAvKiBUZXh0LldoaXRlc3BhY2UgKi8KLmNvZGVoaWxpdGUgLm1iIHsgY29sb3I6ICNCNDUyQ0QgfSAvKiBMaXRlcmFsLk51bWJlci5CaW4gKi8KLmNvZGVoaWxpdGUgLm1mIHsgY29sb3I6ICNCNDUyQ0QgfSAvKiBMaXRlcmFsLk51bWJlci5GbG9hdCAqLwouY29kZWhpbGl0ZSAubWggeyBjb2xvcjogI0I0NTJDRCB9IC8qIExpdGVyYWwuTnVtYmVyLkhleCAqLwouY29kZWhpbGl0ZSAubWkgeyBjb2xvcjogI0I0NTJDRCB9IC8qIExpdGVyYWwuTnVtYmVyLkludGVnZXIgKi8KLmNvZGVoaWxpdGUgLm1vIHsgY29sb3I6ICNCNDUyQ0QgfSAvKiBMaXRlcmFsLk51bWJlci5PY3QgKi8KLmNvZGVoaWxpdGUgLnNhIHsgY29sb3I6ICNDRDU1NTUgfSAvKiBMaXRlcmFsLlN0cmluZy5BZmZpeCAqLwouY29kZWhpbGl0ZSAuc2IgeyBjb2xvcjogI0NENTU1NSB9IC8qIExpdGVyYWwuU3RyaW5nLkJhY2t0aWNrICovCi5jb2RlaGlsaXRlIC5zYyB7IGNvbG9yOiAjQ0Q1NTU1IH0gLyogTGl0ZXJhbC5TdHJpbmcuQ2hhciAqLwouY29kZWhpbGl0ZSAuZGwgeyBjb2xvcjogI0NENTU1NSB9IC8qIExpdGVyYWwuU3RyaW5nLkRlbGltaXRlciAqLwouY29kZWhpbGl0ZSAuc2QgeyBjb2xvcjogI0NENTU1NSB9IC8qIExpdGVyYWwuU3RyaW5nLkRvYyAqLwouY29kZWhpbGl0ZSAuczIgeyBjb2xvcjogI0NENTU1NSB9IC8qIExpdGVyYWwuU3RyaW5nLkRvdWJsZSAqLwouY29kZWhpbGl0ZSAuc2UgeyBjb2xvcjogI2FlODFmZiB9IC8qIExpdGVyYWwuU3RyaW5nLkVzY2FwZSAqLwouY29kZWhpbGl0ZSAuc2ggeyBjb2xvcjogIzFjN2U3MTsgZm9udC1zdHlsZTogaXRhbGljIH0gLyogTGl0ZXJhbC5TdHJpbmcuSGVyZWRvYyAqLwouY29kZWhpbGl0ZSAuc2kgeyBjb2xvcjogI0NENTU1NSB9IC8qIExpdGVyYWwuU3RyaW5nLkludGVycG9sICovCi5jb2RlaGlsaXRlIC5zeCB7IGNvbG9yOiAjY2I2YzIwIH0gLyogTGl0ZXJhbC5TdHJpbmcuT3RoZXIgKi8KLmNvZGVoaWxpdGUgLnNyIHsgY29sb3I6ICMxYzdlNzEgfSAvKiBMaXRlcmFsLlN0cmluZy5SZWdleCAqLwouY29kZWhpbGl0ZSAuczEgeyBjb2xvcjogI0NENTU1NSB9IC8qIExpdGVyYWwuU3RyaW5nLlNpbmdsZSAqLwouY29kZWhpbGl0ZSAuc3MgeyBjb2xvcjogI0NENTU1NSB9IC8qIExpdGVyYWwuU3RyaW5nLlN5bWJvbCAqLwouY29kZWhpbGl0ZSAuYnAgeyBjb2xvcjogIzY1OGIwMCB9IC8qIE5hbWUuQnVpbHRpbi5Qc2V1ZG8gKi8KLmNvZGVoaWxpdGUgLmZtIHsgY29sb3I6ICMwMDhiNDUgfSAvKiBOYW1lLkZ1bmN0aW9uLk1hZ2ljICovCi5jb2RlaGlsaXRlIC52YyB7IGNvbG9yOiAjMDA2ODhCIH0gLyogTmFtZS5WYXJpYWJsZS5DbGFzcyAqLwouY29kZWhpbGl0ZSAudmcgeyBjb2xvcjogIzAwNjg4QiB9IC8qIE5hbWUuVmFyaWFibGUuR2xvYmFsICovCi5jb2RlaGlsaXRlIC52aSB7IGNvbG9yOiAjMDA2ODhCIH0gLyogTmFtZS5WYXJpYWJsZS5JbnN0YW5jZSAqLwouY29kZWhpbGl0ZSAudm0geyBjb2xvcjogIzAwNjg4QiB9IC8qIE5hbWUuVmFyaWFibGUuTWFnaWMgKi8KLmNvZGVoaWxpdGUgLmlsIHsgY29sb3I6ICNCNDUyQ0QgfSAvKiBMaXRlcmFsLk51bWJlci5JbnRlZ2VyLkxvbmcgKi8KICAgIC8qIHBhZ2VfY3NzICovCgogICAgCiAgICBodG1sewogICAgICAgIGJhY2tncm91bmQ6ICNFRUVFRUU7CiAgICB9CiAgICBib2R5ewogICAgICAgIHdpZHRoOiA5MCU7CiAgICAgICAgbWF4LXdpZHRoOiA5NjBweDsKICAgICAgICBiYWNrZ3JvdW5kOiAjRkZGRkZGOwogICAgICAgIG1hcmdpbjogM2VtIGF1dG8gMDsKICAgICAgICBwYWRkaW5nLXRvcDogMmVtOwogICAgICAgIGJvcmRlcjogMXB4IHNvbGlkICNFRUVFRUU7CiAgICAgICAgYm9yZGVyLXdpZHRoOiAwIDFweDsKICAgIH0KCiAgICAucG9zdHsKICAgICAgICBwYWRkaW5nOiA1JSAxMCU7CiAgICAgICAgbWFyZ2luLXRvcDogMDsKICAgICAgICBtYXJnaW4tYm90dG9tOiAwOwogICAgfQogICAgCgogICAgLnRpdGxlX2NvbnRhaW5lcnsKICAgICAgICBtYXJnaW46IC0yZW0gMCAzLjVlbTsKICAgICAgICBwYWRkaW5nLWJvdHRvbTogMmVtOwogICAgICAgIGJvcmRlci1ib3R0b206IDNweCBkb3VibGUgI0VFRUVFRTsKICAgIH0KICAgIC50aXRsZV9jb250YWluZXIgaDF7CiAgICAgICAgbWFyZ2luLXRvcDogMS4yZW07CiAgICAgICAgbWFyZ2luLWJvdHRvbTogMC42ZW07CiAgICAgICAgbGluZS1oZWlnaHQ6IDEuMzU7CiAgICAgICAgZm9udC1zaXplOiAyLjI1ZW07CiAgICB9CiAgICAudGl0bGVfY29udGFpbmVyIGgyewogICAgICAgIGNvbG9yOiAjODg4ODg4OwogICAgICAgIGZvbnQtc2l6ZTogMWVtOwogICAgICAgIGZvbnQtd2VpZ2h0OiBub3JtYWw7CiAgICAgICAgcGFkZGluZy1ib3R0b206IDJlbTsKICAgICAgICBsaW5lLWhlaWdodDogMS4zNTsKICAgICAgICBtYXJnaW4tYm90dG9tOiAtMmVtOwogICAgfQoKICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG1heC13aWR0aDogNzYwcHgpewogICAgICAgIGh0bWx7CiAgICAgICAgICAgIGJhY2tncm91bmQ6IHRyYW5zcGFyZW50OwogICAgICAgIH0KICAgICAgICBib2R5ewogICAgICAgICAgICBtYXJnaW46IDA7CiAgICAgICAgfQogICAgICAgIC5wb3N0ewogICAgICAgICAgICBwYWRkaW5nOiAwOwogICAgICAgIH0KICAgIH0KICAgIC8qIHBhZ2VfY3NzICovCgogICAg">
+    <script src="https://markeditor-files.oss-cn-hangzhou.aliyuncs.com/fb_static/lib/markdown/echarts.min.js" type= "text/javascript"></script>
+</head>
+<body>
+    <div class="post">
+        <div class="post_body">
+            
+            <blockquote class="blockquote_lines_1">
+<p class="md_block">
+    <span class="md_line md_line_dom_embed md_line_start md_line_end"><strong>MarkEditor 不仅是更易于输入表格，还能自动生成线图、柱状图、饼图……</strong></span>
+</p>
+
+</blockquote>
+<h2 id="toc_0" class="h16 md_first_h">MarkEditor风格的表格语法</h2>
+<table>
+ <thead><tr><th style="text-align:left">项目</th>
+<th style="text-align:left">价格</th>
+<th style="text-align:left">描述</th>
+ </tr>
+</thead>
+ <tbody><tr><td style="text-align:left">尺子        </td>
+<td style="text-align:left">      ￥2      </td>
+<td style="text-align:left">   说明内容，也可为空</td>
+</tr>
+<tr><td style="text-align:left">本子        </td>
+<td style="text-align:left">      ￥8     (描述偷懒不写完第三项也可以，不会破坏表格结构)</td>
+<td style="text-align:left"></td>
+</tr>
+<tr><td style="text-align:left">Tip        </td>
+<td style="text-align:left">      ￥18    </td>
+<td style="text-align:left"><strong>光标在表格区域时，右键点击，有更简单的“编辑表格”命令</strong></td>
+</tr>
+</tbody> 
+</table>
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line md_line_start md_line_end">第一行是表格的第一栏，每个项的文本中可以追加<code>(-)</code>、<code>(&gt;)</code>、<code>(&lt;)</code>来实现某列内的文本对齐，它们也分别等同于<code>(center)</code>、<code>(right)</code>、<code>(left)</code>。</span>
+</p>
+
+<table>
+ <thead><tr><th style="text-align:center">项目</th>
+<th style="text-align:right">价格</th>
+<th style="text-align:left">描述</th>
+ </tr>
+</thead>
+ <tbody><tr><td style="text-align:center">尺子        </td>
+<td style="text-align:right">      ￥20         </td>
+<td style="text-align:left">   ?</td>
+</tr>
+<tr><td style="text-align:center">本子        </td>
+<td style="text-align:right">      ￥8</td>
+<td style="text-align:left"></td>
+</tr>
+</tbody> 
+</table>
+<!--block_code_end-->
+<blockquote class="blockquote_lines_1">
+<p class="md_block">
+    <span class="md_line md_line_start md_line_end">自定义补全缺失的字符</span>
+</p>
+
+</blockquote>
+<table>
+ <thead><tr><th style="text-align:left">项目</th>
+<th style="text-align:left">价格</th>
+<th style="text-align:left">描述</th>
+ </tr>
+</thead>
+ <tbody><tr><td style="text-align:left">尺子</td>
+<td style="text-align:left">我是缺失的补全</td>
+<td style="text-align:left">我是缺失的补全</td>
+</tr>
+<tr><td style="text-align:left">本子</td>
+<td style="text-align:left">我是缺失的补全</td>
+<td style="text-align:left">我是缺失的补全</td>
+</tr>
+</tbody> 
+</table>
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line md_line_start md_line_end">表格会自动补全缺失的<strong>列</strong>，这样一来，<code>尺子</code>和<code>本子</code>的<code>价格</code>、<code>描述</code>就全部是<code>我是缺失的补全</code>了。</span>
+</p>
+
+<h2 id="toc_1" class="h16">自动制图语法</h2>
+
+<p class="md_block">
+    <span class="md_line md_line_start">MarkEditor 支持三种类型的制图，声明 table 的时候，后面加上 line、pie、bar三者之一即可。<br /></span>
+    <span class="md_line md_line_end">比如下面的 Demo (具体效果，可以查看预览)</span>
+</p>
+
+<h3 id="toc_2" class="h16">柱状图</h3>
+
+<p class="md_block">
+    <span class="md_line md_line_dom_embed md_line_start md_line_end"><strong>最简单的一个图表:</strong></span>
+</p>
+
+<!--md_echarts--><div class="md_echarts" content_id="9a106b9d3400ef182d3793e74b1128b7" id="ZpuP5rtxaKu7PLJVhxg2bUN" style="width:100%;min-width: 600px;height:400px;"></div>
+    <!--js_run_it--><script type="text/javascript">
+    var my_chart = echarts.init(document.getElementById('ZpuP5rtxaKu7PLJVhxg2bUN'));
+    var option = {
+        animation: false,
+        color: ['#18A67A','#E14B78','#3B8FBD','#FAB432','#4D79B9','#92C6AE','#AD314D','#F7A63F','#41B882','#D28268','#395DAD','#1B9FCF'],
+        tooltip : {
+            trigger: 'axis'
+        },
+        
+    xAxis: {
+        boundaryGap: true,
+        data: ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"],
+        axisLine:{
+            lineStyle:{
+                color: '#ccc'
+            }
+        },
+        axisLabel:{
+            color: '#555',
+            interval:0
+        },
+        splitLine:{
+            lineStyle: {
+                color: '#f0f0f0'
+            }
+        },
+    },
+    yAxis:{
+        axisLine:{
+            lineStyle:{
+                color: '#ccc'
+            }
+        },
+        axisLabel:{
+            color: '#555'
+        },
+        splitLine:{
+            lineStyle: {
+                color: '#f0f0f0'
+            }
+        },
+    },
+    
+        
+        series:[ {
+        name: 'Value',
+        type: 'bar',
+        data: [15,20,36,10,10,20]
+        
+    ,itemStyle: {
+                normal: {
+                    color: function(params) {
+                        var colorList = ['#18A67A','#E14B78','#3B8FBD','#FAB432','#4D79B9','#92C6AE','#AD314D','#F7A63F','#41B882','#D28268','#395DAD','#1B9FCF'];
+                        return colorList[params.dataIndex%colorList.length]
+                    }
+                }
+            }
+    
+    } ]
+    };
+    my_chart.setOption(option);
+    </script>
+    
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line md_line_start md_line_end"><strong>也可以是横向的</strong>:</span>
+</p>
+
+<!--md_echarts--><div class="md_echarts" content_id="f985fbff98bdbf31a66ffd5a50f0fefb" id="ZLthLc5k77QUm8TmD2H4gqE" style="width:100%;min-width: 600px;height:400px;"></div>
+    <!--js_run_it--><script type="text/javascript">
+    var my_chart = echarts.init(document.getElementById('ZLthLc5k77QUm8TmD2H4gqE'));
+    var option = {
+        animation: false,
+        color: ['#18A67A','#E14B78','#3B8FBD','#FAB432','#4D79B9','#92C6AE','#AD314D','#F7A63F','#41B882','#D28268','#395DAD','#1B9FCF'],
+        tooltip : {
+            trigger: 'axis'
+        },
+        
+    xAxis: {
+        boundaryGap: true,
+        data: ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"],
+        axisLine:{
+            lineStyle:{
+                color: '#ccc'
+            }
+        },
+        axisLabel:{
+            color: '#555',
+            interval:0
+        },
+        splitLine:{
+            lineStyle: {
+                color: '#f0f0f0'
+            }
+        },
+    },
+    yAxis:{
+        axisLine:{
+            lineStyle:{
+                color: '#ccc'
+            }
+        },
+        axisLabel:{
+            color: '#555'
+        },
+        splitLine:{
+            lineStyle: {
+                color: '#f0f0f0'
+            }
+        },
+    },
+    
+        
+        series:[ {
+        name: '数量',
+        type: 'bar',
+        data: [15,20,36,10,10,20]
+        
+    ,itemStyle: {
+                normal: {
+                    color: function(params) {
+                        var colorList = ['#18A67A','#E14B78','#3B8FBD','#FAB432','#4D79B9','#92C6AE','#AD314D','#F7A63F','#41B882','#D28268','#395DAD','#1B9FCF'];
+                        return colorList[params.dataIndex%colorList.length]
+                    }
+                }
+            }
+    
+    } ]
+    };
+    my_chart.setOption(option);
+    </script>
+    
+<!--block_code_end-->
+<hr>
+
+<p class="md_block">
+    <span class="md_line md_line_dom_embed md_line_start md_line_end"><strong>还可以是这种横纵两个维度的:</strong></span>
+</p>
+
+<!--md_echarts--><div class="md_echarts" content_id="3fc2799db0518f7f65e59520e3ce2281" id="ZpHgPaAKA2EfR5vj5XYgyuY" style="width:100%;min-width: 600px;height:400px;"></div>
+    <!--js_run_it--><script type="text/javascript">
+    var my_chart = echarts.init(document.getElementById('ZpHgPaAKA2EfR5vj5XYgyuY'));
+    var option = {
+        animation: false,
+        color: ['#18A67A','#E14B78','#3B8FBD','#FAB432','#4D79B9','#92C6AE','#AD314D','#F7A63F','#41B882','#D28268','#395DAD','#1B9FCF'],
+        tooltip : {
+            trigger: 'axis'
+        },
+        
+    xAxis: {
+        boundaryGap: true,
+        data: ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"],
+        axisLine:{
+            lineStyle:{
+                color: '#ccc'
+            }
+        },
+        axisLabel:{
+            color: '#555',
+            interval:0
+        },
+        splitLine:{
+            lineStyle: {
+                color: '#f0f0f0'
+            }
+        },
+    },
+    yAxis:{
+        axisLine:{
+            lineStyle:{
+                color: '#ccc'
+            }
+        },
+        axisLabel:{
+            color: '#555'
+        },
+        splitLine:{
+            lineStyle: {
+                color: '#f0f0f0'
+            }
+        },
+    },
+    
+        legend: {
+                data: ["1季度" , "2季度" , "3季度上" , "3季度下"]
+            },
+        series:[ {
+        name: '1季度',
+        type: 'bar',
+        data: [5,20,36,10,10,21]
+        
+    },{
+        name: '2季度',
+        type: 'bar',
+        data: [15,20,6,10,10,30]
+        
+    },{stack: "3季度",
+        name: '3季度上',
+        type: 'bar',
+        data: [2,2,16,8,6,30]
+        
+    },{stack: "3季度",
+        name: '3季度下',
+        type: 'bar',
+        data: [5,2,13,10,9,20]
+        
+    } ]
+    };
+    my_chart.setOption(option);
+    </script>
+    
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line md_line_start md_line_end">注意: <code>3季度上(3季度)</code> 和 <code>3季度下(3季度)</code>会自动实现归档，合并到同一个柱状图中。</span>
+</p>
+
+<h2 id="toc_3" class="h16">线图</h2>
+
+<p class="md_block">
+    <span class="md_line md_line_start md_line_end">跟柱状图非常类似，只需要将上面柱状图的几个 demo，由<code>table:bar</code>改为<code>table:line</code>即可。</span>
+</p>
+
+<h2 id="toc_4" class="h16">饼图</h2>
+
+<p class="md_block">
+    <span class="md_line md_line_dom_embed md_line_start md_line_end"><strong>最简单的一个图表:</strong></span>
+</p>
+
+<!--md_echarts--><div class="md_echarts" content_id="9a106b9d3400ef182d3793e74b1128b7" id="ZUzCvdgffB9HBT2xLXPqsPU" style="width:100%;min-width: 600px;height:400px;"></div>
+    <!--js_run_it--><script type="text/javascript">
+    var my_chart = echarts.init(document.getElementById('ZUzCvdgffB9HBT2xLXPqsPU'));
+    var option = {
+        animation: false,
+        color: ['#18A67A','#E14B78','#3B8FBD','#FAB432','#4D79B9','#92C6AE','#AD314D','#F7A63F','#41B882','#D28268','#395DAD','#1B9FCF'],
+        tooltip: {
+            trigger: 'item',
+            formatter: "{a} <br/>{b}: {c} ({d}%)"
+        },
+        
+        series:[ {
+        name: '',
+        type: 'pie',
+        radius : '55%',
+        
+        data: [{value:15, name:"衬衫"},{value:20, name:"羊毛衫"},{value:36, name:"雪纺衫"},{value:10, name:"裤子"},{value:10, name:"高跟鞋"},{value:20, name:"袜子"}],
+        itemStyle: {
+            emphasis: {
+                shadowBlur: 10,
+                shadowOffsetX: 0,
+                shadowColor: 'rgba(0, 0, 0, 0.5)'
+            }
+        }
+    } ]
+    };
+    my_chart.setOption(option);
+    </script>
+    
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line md_line_start md_line_end"><strong>也可以是横向的</strong>:</span>
+</p>
+
+<!--md_echarts--><div class="md_echarts" content_id="f985fbff98bdbf31a66ffd5a50f0fefb" id="Zc5dDubZbZWpqpkRKVxgyGT" style="width:100%;min-width: 600px;height:400px;"></div>
+    <!--js_run_it--><script type="text/javascript">
+    var my_chart = echarts.init(document.getElementById('Zc5dDubZbZWpqpkRKVxgyGT'));
+    var option = {
+        animation: false,
+        color: ['#18A67A','#E14B78','#3B8FBD','#FAB432','#4D79B9','#92C6AE','#AD314D','#F7A63F','#41B882','#D28268','#395DAD','#1B9FCF'],
+        tooltip: {
+            trigger: 'item',
+            formatter: "{a} <br/>{b}: {c} ({d}%)"
+        },
+        legend: {
+                data: ["衬衫" , "羊毛衫" , "雪纺衫" , "裤子" , "高跟鞋" , "袜子"]
+            },
+        series:[ {
+        name: '品类',
+        type: 'pie',
+        radius : '55%',
+        
+        data: [{value:15, name:"衬衫"},{value:20, name:"羊毛衫"},{value:36, name:"雪纺衫"},{value:10, name:"裤子"},{value:10, name:"高跟鞋"},{value:20, name:"袜子"}],
+        itemStyle: {
+            emphasis: {
+                shadowBlur: 10,
+                shadowOffsetX: 0,
+                shadowColor: 'rgba(0, 0, 0, 0.5)'
+            }
+        }
+    } ]
+    };
+    my_chart.setOption(option);
+    </script>
+    
+<!--block_code_end-->
+<p class="md_block">
+    <span class="md_line md_line_start md_line_end"><strong>自动归档</strong>:</span>
+</p>
+
+<!--md_echarts--><div class="md_echarts" content_id="a0513b2830c72ddd888b483ea7343e7f" id="ZMDoJhkhkMuGR4QaqFuqovS" style="width:100%;min-width: 600px;height:400px;"></div>
+    <!--js_run_it--><script type="text/javascript">
+    var my_chart = echarts.init(document.getElementById('ZMDoJhkhkMuGR4QaqFuqovS'));
+    var option = {
+        animation: false,
+        color: ['#18A67A','#E14B78','#3B8FBD','#FAB432','#4D79B9','#92C6AE','#AD314D','#F7A63F','#41B882','#D28268','#395DAD','#1B9FCF'],
+        tooltip: {
+            trigger: 'item',
+            formatter: "{a} <br/>{b}: {c} ({d}%)"
+        },
+        legend: {
+                data: ["衬衫" , "羊毛衫" , "雪纺衫" , "裤子" , "高跟鞋" , "袜子"]
+            },
+        series:[ {
+        name: '品类',
+        type: 'pie',
+        radius : [0, '30%'],
+        
+        label: {
+                normal: {
+                    position: 'inner'
+                }
+            },
+            labelLine: {
+                normal: {
+                    show: false
+                }
+            },
+        
+        data: [{value:71, name:"衣服"},{value:10, name:"裤子"},{value:30, name:"鞋袜"}],
+        itemStyle: {
+            emphasis: {
+                shadowBlur: 10,
+                shadowOffsetX: 0,
+                shadowColor: 'rgba(0, 0, 0, 0.5)'
+            }
+        }
+    },{
+        name: '品类',
+        type: 'pie',
+        radius : ['40%', '55%'],
+        
+        data: [{value:15, name:"衬衫"},{value:20, name:"羊毛衫"},{value:36, name:"雪纺衫"},{value:10, name:"裤子"},{value:10, name:"高跟鞋"},{value:20, name:"袜子"}],
+        itemStyle: {
+            emphasis: {
+                shadowBlur: 10,
+                shadowOffsetX: 0,
+                shadowColor: 'rgba(0, 0, 0, 0.5)'
+            }
+        }
+    } ]
+    };
+    my_chart.setOption(option);
+    </script>
+    
+<!--block_code_end-->
+        </div>
+    </div>
+    <!--mathjax-->
+    <!--mermaid-->
+</body>
+</html>
